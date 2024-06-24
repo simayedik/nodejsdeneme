@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Login</h1>
+    <% if(errors!= null){ %> 
+    <p> 
+      
+        <% for(error of errors){%>
+         <%= error.msg %>
+         <br>
+         <%}%>
+      
+         
+    </p>
+    <%}%> 
+    <form method="POST" action="/" >
+       <input type="text" name="email">
+       <input type="text"  name="password">
+       
+        <button  type="submit" >Giriş Yap</button>
+      </form>
+</body>
+</html>
